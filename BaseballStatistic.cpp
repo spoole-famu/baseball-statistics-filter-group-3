@@ -61,3 +61,27 @@ void BaseballStatistic::setOPS(double onBasePlusSlugging){
 void BaseballStatistic::setERA(double earnedRunAverage){
     era = earnedRunAverage;
 }
+
+	    //accessor functions to retrieve each player's specific statistic
+		std::string getFirstName()const { return fName; }
+		std::string getLastName()const { return lName; };
+		std::string getTeamName()const { return tNum; };
+		int getJerseyNum()const { return jNum; };
+		std::string getPosition()const { return ps; };
+		int getAge()const { return age; };
+		char getBatting()const { return b; };
+		char getThrowing()const { return t; };
+		int getAtBats()const { return atb; };
+		double getBattingAverage()const { return ba; };
+		int getHR()const { return homeRun; };
+		int getRBI()const { return runsBattedIn; };
+		int getSB()const { return stolenBase; };
+		double getOPS()const { return onBasePlusSlugging; } ;
+		double getERA()const { return earnedRunAverage; };
+		
+
+		//prints a single statistic row to the terminal
+		void print()const{
+        
+        
+        };
