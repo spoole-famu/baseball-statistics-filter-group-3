@@ -4,6 +4,17 @@
 
 using namespace std;
 
+BaseballStatistic::BaseballStatistic():firstName(""), lastName(""), teamName(""), jerseyNum(0), position(""), atBats(0), hr(0),
+rbi(0), batting(""), throwing(""), sb(0), battingAverage(0.0), ops(0.0), era(0.0);
+{
+    
+}
+BaseballStatistic::BaseballStatistic(string fName, string lName, string tName, int jersey, string pos, int bats, int homerun, int rBats, 
+                                     char b, char t, int s, double bA, int Ops,int Era, int , double, double)
+{
+    
+}
+
 //Mutators
 
 //Set Functions
