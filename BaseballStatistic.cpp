@@ -1,11 +1,43 @@
-#include "Date.h"
+
+#include <iostream>
 #include <string>
+#include <fstream>
+#include <vector>
+
 #include "BaseballStatistic.h"
+#include "Date.h"
+#include "Filter.h"
 
 using namespace std;
 
+//Default constructor
+
+BaseballStatistic::BaseballStatistic (string fName, string lName, string tN, int jN,
+string pos, int atBat , int homeRun, int runsBattedIn, char bat, char thrower, int esbee, double batAvg, int y,
+int m, int d, double opss, double eraa){
+                firstName = fName;
+                lastName = lName;
+                teamName = tN;
+                jerseyNum = jN;
+                position = pos;
+                atBats = atBat;
+                hr = homeRun;
+                rbi = runsBattedIn;
+                batting = bat;
+                throwing = thrower;
+                sb = esbee;
+                battingAverage = batAvg;
+                ops = opss;
+                era = eraa;
+                dob = new Date(y, m, d);
+              
+
+}
+
+
 //Mutators
 
+//Set Functions
 void BaseballStatistic::setFirstName(string fName){
     firstName = fName;
 }
@@ -60,4 +92,73 @@ void BaseballStatistic::setOPS(double onBasePlusSlugging){
 
 void BaseballStatistic::setERA(double earnedRunAverage){
     era = earnedRunAverage;
+}
+
+//Get functions
+
+string BaseballStatistic::getFirstName()const{
+    return firstName;
+}
+
+string BaseballStatistic::getLastName()const{
+    return lastName;
+}
+
+string BaseballStatistic::getTeamName()const{
+    return teamName;
+}
+
+int BaseballStatistic::getJerseyNum()const{
+    return jerseyNum;
+}
+
+string BaseballStatistic::getPosition()const{
+    return position;
+}
+
+char BaseballStatistic::getBatting()const{
+    return batting;
+}
+
+char BaseballStatistic::getThrowing()const{
+    return throwing;
+}
+
+int BaseballStatistic::getAtBats()const{
+    return atBats;
+}
+
+double BaseballStatistic::getBattingAverage()const{
+    return battingAverage;
+}
+
+int BaseballStatistic::getHR()const{
+    return hr;
+}
+
+int BaseballStatistic::getRBI()const{
+    return rbi;
+}
+
+int BaseballStatistic::getSB()const{
+    return sb;
+}
+
+double BaseballStatistic::getOPS()const{
+    return ops;
+}
+
+double BaseballStatistic::getERA()const{
+    return era;
+}
+
+//Print function
+
+void BaseballStatistic::print()const{
+   cout << getLastName() << " " << getFirstName() << " " << dob->getDate() << " " << getJerseyNum() << " "
+        << getTeamName() << " " << getPosition << " " << getBatting << " " 
+        << getThrowing() << " " << getAtBats << " " << " " << getThrowing() << " " << 
+        << getBattingAverage << " " << getHR << " " << getRBI << " " << getSB 
+        << " " << getOPS << " " << getERA << " " << endl;
+
 }
